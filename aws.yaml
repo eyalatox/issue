@@ -1,0 +1,19 @@
+image: node:16
+
+pipelines:
+  default:
+    - step:
+        name: check script
+        script:
+          - echo "AKIA4J7K8L9M0E1O2T3Q4R5D6T7U2V9W" > secret.txt # no match
+
+  pull-requests:
+    '**':
+      - step:
+          name: Pull Request Validation
+          script:
+            - echo "AKIAIOSF5DNN3D4F3GVB" > secret.txt  # medium confidence match
+
+# aws = "AKIA4J7K8L9M0N5O2P3Q4R5S6T7U2V9W" # no match
+
+# aws = "AKIAIOSFODRN7D4W3GVB" # high confidence match
