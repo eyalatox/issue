@@ -1,0 +1,15 @@
+pipeline:
+  batch:
+    size: 125
+    delay: 5
+
+path:
+    config: /usr/share/logstash/pipeline
+
+log:
+    level: warn
+
+queue:
+    type: persisted
+
+path.queue: /var/queue/
